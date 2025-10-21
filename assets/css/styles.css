@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+    min-height: 100vh;
+    padding: 1.5rem;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Card */
+.header-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-title h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.icon-large {
+    width: 2rem;
+    height: 2rem;
+    color: #2563eb;
+}
+
+.icon-medium {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon-small {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Flow Buttons */
+.flow-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+    gap: 0.75rem;
+}
+
+.flow-btn {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #e5e7eb;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.flow-btn:hover {
+    border-color: #d1d5db;
+}
+
+.flow-btn.active {
+    border-color: #3b82f6;
+    background: #eff6ff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.flow-btn span {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.flow-btn.active span {
+    color: #1e40af;
+}
+
+.flow-btn .icon-small {
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.flow-btn.active .icon-small {
+    color: #2563eb;
+}
+
+/* Content Card */
+.content-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.flow-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.flow-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.current-flow-icon {
+    color: #2563eb;
+}
+
+/* Flow Steps */
+.flow-step {
+    border: 2px solid;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.flow-step.blue {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #1e40af;
+}
+
+.flow-step.green {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+    color: #166534;
+}
+
+.flow-step.purple {
+    background: #faf5ff;
+    border-color: #e9d5ff;
+    color: #7e22ce;
+}
+
+.flow-step.orange {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #c2410c;
+}
+
+.flow-step.red {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+.flow-step.gray {
+    background: #f9fafb;
+    border-color: #e5e7eb;
+    color: #374151;
+}
+
+.step-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: white;
+}
+
+.step-number.blue { background: #3b82f6; }
+.step-number.green { background: #22c55e; }
+.step-number.purple { background: #a855f7; }
+.step-number.orange { background: #f97316; }
+.step-number.red { background: #ef4444; }
+.step-number.gray { background: #6b7280; }
+
+.step-body {
+    flex: 1;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.step-title {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.step-description {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.toggle-code-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    color: inherit;
+}
+
+.toggle-code-btn:hover {
+    text-decoration: underline;
+}
+
+.code-block {
+    display: none;
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+}
+
+.code-block.visible {
+    display: block;
+}
+
+/* Summary Box */
+.summary-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 0.25rem;
+}
+
+.summary-title {
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.summary-text {
+    font-size: 0.875rem;
+    color: #1e40af;
+}
+
+/* Classes Card */
+.classes-card {
+    margin-top: 1.5rem;
+    background: #1e293b;
+    color: #e2e8f0;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.classes-title {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+    gap: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.class-item {
+    background: #334155;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+
+.class-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.class-name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.class-name.blue { color: #93c5fd; }
+.class-name.green { color: #86efac; }
+.class-name.purple { color: #d8b4fe; }
+.class-name.orange { color: #fdba74; }
+.class-name.yellow { color: #fde047; }
+
+.class-description {
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .header-card {
+        padding: 1.5rem;
+    }
+
+    .header-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .flow-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .content-card {
+        padding: 1.5rem;
+    }
+
+    .flow-title {
+        font-size: 1.25rem;
+    }
+}
